@@ -1,0 +1,24 @@
+name: Feature Request
+description: Suggest an improvement to CloudConfig.
+title: '[Feature]: '
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to Solve
+      description: Describe your use case and what you cannot do today.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Behavior
+      description: Describe the behavior or API you would like, with an example if useful.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or Workarounds
+      description: What have you tried, and where does it fall short?

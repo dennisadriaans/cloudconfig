@@ -1,0 +1,45 @@
+name: Bug Report
+description: Report a reproducible problem with CloudConfig.
+title: '[Bug]: '
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing issues before submitting. Remove credentials and private data from logs and reproductions.
+  - type: input
+    id: versions
+    attributes:
+      label: Package Versions
+      description: Include @cloudconfig/core and @cloudconfig/nuxt when installed.
+      placeholder: '@cloudconfig/core 0.2.0-beta.7, @cloudconfig/nuxt 0.2.0-beta.7'
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Node.js version, operating system, framework, and hosting platform.
+      placeholder: Node.js 22, macOS, Nuxt 4, Cloudflare
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Include a minimal reproduction link or the config and commands needed to reproduce the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: Include relevant error messages or logs.
+    validations:
+      required: true
