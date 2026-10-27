@@ -15,14 +15,14 @@ Deploy your backend to Cloudflare, Vercel, or Azure from the same config.
 It is built for frontend engineers who need a backend without maintaining a
 separate backend project. Use it with Nuxt, Next.js, or a standalone API.
 
-> CloudConfig is in beta. The API may change before the first stable release.
+> CloudConfig 0.2 is available on the `latest` npm dist-tag.
 
 ## Start a Local API
 
 You need Node.js 22.12 or newer and pnpm 10 or newer:
 
 ```bash
-pnpm dlx @cloudconfig/core@beta init blog-api --target standalone
+pnpm dlx @cloudconfig/core@latest init blog-api --target standalone
 cd blog-api
 pnpm install
 pnpm db:generate
