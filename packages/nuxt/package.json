@@ -1,0 +1,69 @@
+{
+  "name": "@cloudconfig/nuxt",
+  "version": "0.2.0",
+  "description": "Nuxt module for CloudConfig — mounts the backend, resolves bindings per request, and ships a typed SSR-safe client.",
+  "homepage": "https://cloudconfig.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dennisadriaans/cloudconfig.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dennisadriaans/cloudconfig/issues"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/module.js",
+  "types": "./dist/module.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/module.d.ts",
+      "default": "./dist/module.js"
+    },
+    "./package.json": "./package.json",
+    "./two-factor": {
+      "types": "./dist/runtime/composables/two-factor.d.ts",
+      "default": "./dist/runtime/composables/two-factor.js"
+    }
+  },
+  "dependencies": {
+    "@nuxt/kit": "^4.0.0",
+    "@nuxt/schema": "^4.0.0",
+    "jiti": "^2.6.0"
+  },
+  "peerDependencies": {
+    "@better-auth/passkey": "^1.7.7",
+    "better-auth": "^1.7.7",
+    "@cloudconfig/core": "0.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@better-auth/passkey": {
+      "optional": true
+    },
+    "better-auth": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@better-auth/passkey": "^1.7.7",
+    "@nuxt/nitro-server": "^4.5.0",
+    "@types/node": "^22.0.0",
+    "better-auth": "^1.7.7",
+    "nuxt": "^4.5.0",
+    "tsdown": "^0.15.0",
+    "typescript": "^5.9.3",
+    "@cloudconfig/core": "0.2.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit"
+  }
+}
