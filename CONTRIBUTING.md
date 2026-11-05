@@ -1,7 +1,32 @@
-# Share Feedback and Documentation Fixes
+# Contributing
 
-CloudConfig's implementation is maintained in a private repository. This public
-repository hosts the product overview and community issue tracker.
+Thanks for helping improve CloudConfig. Bug reports, fixes and documentation
+changes are welcome.
+
+## Setup
+
+You need Node.js 22.12 or newer and pnpm 10 or newer.
+
+```bash
+pnpm install
+pnpm build
+```
+
+| Path                   | Contents                                                     |
+| ---------------------- | ------------------------------------------------------------ |
+| `packages/cloudconfig` | `@cloudconfig/core`: DSL, server, client, MCP, deploy and CLI |
+| `packages/nuxt`        | `@cloudconfig/nuxt`: the Nuxt module                         |
+
+## Checks
+
+Run these before you open a pull request. CI runs the same commands.
+
+```bash
+pnpm format:check
+pnpm lint
+pnpm typecheck
+pnpm test
+```
 
 ## Report a Bug
 
@@ -19,8 +44,8 @@ Use the feature request form to describe the problem you want to solve, your
 proposed behavior, and any workaround you currently use. Reactions on an existing
 request help show interest without opening duplicate issues.
 
-## Improve the Showcase
+## Pull Requests
 
-Pull requests correcting this README or the issue templates are welcome.
-Implementation changes are handled in the private repository. Find setup and
-usage guides in the [documentation](https://cloudconfig.dev/docs).
+- Keep changes focused, and add or update a test for every behavior change.
+- Use [Conventional Commits](https://www.conventionalcommits.org) for commit messages.
+- Report security issues privately through GitHub security advisories, not public issues.

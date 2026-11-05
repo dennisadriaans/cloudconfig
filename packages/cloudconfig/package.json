@@ -1,0 +1,279 @@
+{
+  "name": "@cloudconfig/core",
+  "version": "0.3.0",
+  "description": "One config file → a deployed backend on Cloudflare, Vercel or Azure. Database, sign-in, REST API, and a typed client from a single cloud.config.ts.",
+  "homepage": "https://cloudconfig.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dennisadriaans/cloudconfig.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dennisadriaans/cloudconfig/issues"
+  },
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "cloudconfig": "./dist/cli/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client/index.d.ts",
+      "default": "./dist/client/index.js"
+    },
+    "./agents": {
+      "types": "./dist/agents/index.d.ts",
+      "default": "./dist/agents/index.js"
+    },
+    "./agents/runtime": {
+      "types": "./dist/agents/runtime.d.ts",
+      "default": "./dist/agents/runtime.js"
+    },
+    "./agents/runs": {
+      "types": "./dist/agents/runs.d.ts",
+      "default": "./dist/agents/runs.js"
+    },
+    "./agents/platform": {
+      "types": "./dist/agents/platform.d.ts",
+      "default": "./dist/agents/platform.js"
+    },
+    "./agents/cloudflare": {
+      "types": "./dist/agents/cloudflare.d.ts",
+      "default": "./dist/agents/cloudflare.js"
+    },
+    "./agents/cloudflare/client": {
+      "types": "./dist/agents/cloudflare-client.d.ts",
+      "default": "./dist/agents/cloudflare-client.js"
+    },
+    "./agents/schedules": {
+      "types": "./dist/agents/schedules.d.ts",
+      "default": "./dist/agents/schedules.js"
+    },
+    "./browser": "./dist/browser/client.js",
+    "./devtools": {
+      "types": "./dist/devtools/studio.d.ts",
+      "default": "./dist/devtools/studio.js"
+    },
+    "./devtools/client": {
+      "types": "./dist/devtools/client.d.ts",
+      "default": "./dist/devtools/client.js"
+    },
+    "./devtools/browser": "./dist/browser/studio.js",
+    "./server": {
+      "types": "./dist/server/index.d.ts",
+      "default": "./dist/server/index.js"
+    },
+    "./void/server": {
+      "types": "./dist/void/server.d.ts",
+      "default": "./dist/void/server.js"
+    },
+    "./void/config": {
+      "types": "./dist/void/config.d.ts",
+      "default": "./dist/void/config.js"
+    },
+    "./void/project": {
+      "types": "./dist/void/project.d.ts",
+      "default": "./dist/void/project.js"
+    },
+    "./void/vite": {
+      "types": "./dist/void/vite.d.ts",
+      "default": "./dist/void/vite.js"
+    },
+    "./void/mcp": {
+      "types": "./dist/void/mcp.d.ts",
+      "default": "./dist/void/mcp.js"
+    },
+    "./void/tools": {
+      "types": "./dist/void/tools.d.ts",
+      "default": "./dist/void/tools.js"
+    },
+    "./mcp": {
+      "types": "./dist/mcp.d.ts",
+      "default": "./dist/mcp.js"
+    },
+    "./connect": {
+      "types": "./dist/connect/index.d.ts",
+      "default": "./dist/connect/index.js"
+    },
+    "./drivers/d1": {
+      "types": "./dist/drivers/d1.d.ts",
+      "default": "./dist/drivers/d1.js"
+    },
+    "./drivers/better-sqlite3": {
+      "types": "./dist/drivers/better-sqlite3.d.ts",
+      "default": "./dist/drivers/better-sqlite3.js"
+    },
+    "./package.json": "./package.json",
+    "./drivers/configured": {
+      "types": "./dist/drivers/configured.d.ts",
+      "default": "./dist/drivers/configured.js"
+    },
+    "./drivers/d1-http": {
+      "types": "./dist/drivers/d1-http.d.ts",
+      "default": "./dist/drivers/d1-http.js"
+    },
+    "./agents/durable": {
+      "types": "./dist/agents/durable.d.ts",
+      "default": "./dist/agents/durable.js"
+    },
+    "./agents/records": {
+      "types": "./dist/agents/records.d.ts",
+      "default": "./dist/agents/records.js"
+    },
+    "./agents/vercel": {
+      "types": "./dist/agents/vercel.d.ts",
+      "default": "./dist/agents/vercel.js"
+    },
+    "./agents/azure": {
+      "types": "./dist/agents/azure.d.ts",
+      "default": "./dist/agents/azure.js"
+    },
+    "./agents/azure/client": {
+      "types": "./dist/agents/azure-client.d.ts",
+      "default": "./dist/agents/azure-client.js"
+    },
+    "./automations": {
+      "types": "./dist/automations/index.d.ts",
+      "default": "./dist/automations/index.js"
+    },
+    "./automations/service": {
+      "types": "./dist/automations/service.d.ts",
+      "default": "./dist/automations/service.js"
+    },
+    "./automations/connect": {
+      "types": "./dist/automations/connect.d.ts",
+      "default": "./dist/automations/connect.js"
+    },
+    "./automations/configure": {
+      "types": "./dist/automations/configure.d.ts",
+      "default": "./dist/automations/configure.js"
+    },
+    "./automations/cloudflare": {
+      "types": "./dist/automations/cloudflare.d.ts",
+      "default": "./dist/automations/cloudflare.js"
+    },
+    "./automations/cloudflare/client": {
+      "types": "./dist/automations/cloudflare-client.d.ts",
+      "default": "./dist/automations/cloudflare-client.js"
+    },
+    "./automations/vercel": {
+      "types": "./dist/automations/vercel.d.ts",
+      "default": "./dist/automations/vercel.js"
+    },
+    "./automations/azure": {
+      "types": "./dist/automations/azure.d.ts",
+      "default": "./dist/automations/azure.js"
+    },
+    "./automations/azure/client": {
+      "types": "./dist/automations/azure-client.d.ts",
+      "default": "./dist/automations/azure-client.js"
+    },
+    "./durable/azure": {
+      "types": "./dist/durable/azure.d.ts",
+      "default": "./dist/durable/azure.js"
+    },
+    "./project": {
+      "types": "./dist/project.d.ts",
+      "default": "./dist/project.js"
+    },
+    "./cloudflare": {
+      "types": "./dist/cloudflare.d.ts",
+      "default": "./dist/cloudflare.js"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.cloudflare.json",
+    "prepare": "pnpm run build"
+  },
+  "dependencies": {
+    "@cfworker/json-schema": "^4.1.1",
+    "@clack/prompts": "^0.11.0",
+    "@dashboardstack/email": "^0.0.2-beta.0",
+    "@hono/node-server": "^2.0.9",
+    "@libsql/client": "^0.18.0",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@vercel/nft": "^1.11.0",
+    "aws4fetch": "^1.0.20",
+    "commander": "^14.0.0",
+    "cron-parser": "^5.10.1",
+    "drizzle-orm": "^0.45.2",
+    "esbuild": "^0.28.2",
+    "hono": "^4.9.0",
+    "jiti": "^2.6.0",
+    "jsonc-parser": "^3.3.1",
+    "picocolors": "^1.1.1",
+    "smol-toml": "^1.8.0",
+    "yazl": "^3.3.1",
+    "zod": "^4.0.0"
+  },
+  "peerDependencies": {
+    "@azure/functions": "^4.16.5",
+    "@azure/storage-blob": "^12.34.0",
+    "@better-auth/passkey": "^1.7.7",
+    "agents": "0.27.0",
+    "better-auth": "^1.7.7",
+    "better-sqlite3": "*",
+    "durable-functions": "3.6.0",
+    "workflow": "5.2.2"
+  },
+  "peerDependenciesMeta": {
+    "@better-auth/passkey": {
+      "optional": true
+    },
+    "agents": {
+      "optional": true
+    },
+    "better-auth": {
+      "optional": true
+    },
+    "better-sqlite3": {
+      "optional": true
+    },
+    "workflow": {
+      "optional": true
+    },
+    "durable-functions": {
+      "optional": true
+    },
+    "@azure/functions": {
+      "optional": true
+    },
+    "@azure/storage-blob": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@azure/functions": "^4.16.5",
+    "@azure/storage-blob": "^12.34.0",
+    "@better-auth/passkey": "^1.7.7",
+    "@cloudflare/workers-types": "5.20261003.1",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.0.0",
+    "@types/yazl": "^3.3.1",
+    "agents": "0.27.0",
+    "better-auth": "^1.7.7",
+    "cf": "1.0.0-beta.24",
+    "drizzle-kit": "^0.31.10",
+    "durable-functions": "3.6.0",
+    "miniflare": "5.20260915.0-alpha",
+    "tsdown": "^0.15.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.0",
+    "workflow": "5.2.2"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

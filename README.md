@@ -15,8 +15,6 @@ Deploy your backend to Cloudflare, Vercel, or Azure from the same config.
 It is built for frontend engineers who need a backend without maintaining a
 separate backend project. Use it with Nuxt, Next.js, or a standalone API.
 
-> CloudConfig 0.2 is available on the `latest` npm dist-tag.
-
 ## Start a Local API
 
 You need Node.js 22.12 or newer and pnpm 10 or newer:
@@ -95,6 +93,10 @@ Use [GitHub Issues](https://github.com/dennisadriaans/cloudconfig/issues) to rep
 bugs and suggest features. Include package versions and a small reproduction
 when reporting a problem. Star this repository to show your support.
 
-This is CloudConfig's public showcase and issue tracker. The implementation is
-maintained in a separate private repository; install the published npm packages
-to use CloudConfig. Package licenses are included in their npm distributions.
+## Contribute
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for setup and checks.
+
+## License
+
+[MIT](./LICENSE)

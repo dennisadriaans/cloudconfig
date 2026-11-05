@@ -1,6 +1,6 @@
 {
   "name": "@cloudconfig/nuxt",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Nuxt module for CloudConfig — mounts the backend, resolves bindings per request, and ships a typed SSR-safe client.",
   "homepage": "https://cloudconfig.dev",
   "repository": {
@@ -28,6 +28,11 @@
       "default": "./dist/runtime/composables/two-factor.js"
     }
   },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "prepare": "pnpm run build"
+  },
   "dependencies": {
     "@nuxt/kit": "^4.0.0",
     "@nuxt/schema": "^4.0.0",
@@ -35,8 +40,8 @@
   },
   "peerDependencies": {
     "@better-auth/passkey": "^1.7.7",
-    "better-auth": "^1.7.7",
-    "@cloudconfig/core": "0.2.0"
+    "@cloudconfig/core": "workspace:*",
+    "better-auth": "^1.7.7"
   },
   "peerDependenciesMeta": {
     "@better-auth/passkey": {
@@ -48,22 +53,18 @@
   },
   "devDependencies": {
     "@better-auth/passkey": "^1.7.7",
+    "@cloudconfig/core": "workspace:*",
     "@nuxt/nitro-server": "^4.5.0",
     "@types/node": "^22.0.0",
     "better-auth": "^1.7.7",
     "nuxt": "^4.5.0",
     "tsdown": "^0.15.0",
-    "typescript": "^5.9.3",
-    "@cloudconfig/core": "0.2.0"
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": ">=22.12.0"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "build": "tsdown",
-    "typecheck": "tsc --noEmit"
   }
 }

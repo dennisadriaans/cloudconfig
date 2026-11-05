@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2023", "DOM"],
+    "types": ["node"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "paths": {
+      "@cloudconfig/core": ["../cloudconfig/src/index.ts"],
+      "@cloudconfig/core/client": ["../cloudconfig/src/client/index.ts"],
+      "@cloudconfig/core/server": ["../cloudconfig/src/server/index.ts"],
+      "@cloudconfig/core/devtools": ["../cloudconfig/src/devtools/studio.ts"],
+      "@cloudconfig/core/devtools/client": ["../cloudconfig/src/devtools/client.ts"]
+    }
+  },
+  "include": ["src", "test"]
+}

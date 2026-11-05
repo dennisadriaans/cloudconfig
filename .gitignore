@@ -1,0 +1,14 @@
+node_modules
+dist
+.nuxt
+.output
+.data
+.wrangler
+.cloudconfig
+coverage
+*.tgz
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.dev.vars
